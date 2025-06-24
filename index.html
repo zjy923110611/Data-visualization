@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <link href="css/public.css" rel="stylesheet" type="text/css" />
+    <link href="css/jianlisw.css" rel="stylesheet" type="text/css" />
+    <title>进销存数据统计</title>
+</head>
+
+<body>
+    <!-- banner start -->
+    <div class="caption-title">
+        <i class="fl"><img src="images/title-left.png"></i>
+        <span class="biaoti fl">进销存大屏数据统计</span>
+        <i class="fr"><img src="images/title-right.png"></i>
+    </div>
+    <!-- 内容正文 -->
+    <div class="zhenwen">
+        <div class="left_zs fl">
+            <!-- 项目概览 -->
+            <div class="data-box1 left_tb fl">
+                <i class="topL"></i>
+                <i class="topR"></i>
+                <i class="bottomL"></i>
+                <i class="bottomR"></i>
+                <div class="data-title">
+                    <b class="data-title-left fl">[</b>
+                    <span>进销存概览</span>
+                    <b class="data-title-right fr">]</b>
+                </div>
+                <!-- 项目概览-->
+                <div class="xmglan">
+                    <ul class="xmgl_heard">
+                        <li>库存</li>
+                        <li class="hove">售卖</li>
+                    </ul>
+                    <div id="xmgl_cen">
+                        <div class="xmgl_tb">
+                            <div class="data-card">
+                                <div class="card-item">
+                                    <div class="card-title">总数量</div>
+                                    <div class="card-value">1000</div>
+                                    <div class="card-unit">个</div>
+                                </div>
+                                <div class="card-item">
+                                    <div class="card-title">总金额</div>
+                                    <div class="card-value">100</div>
+                                    <div class="card-unit">万元</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xmgl_tb none">
+                            <div class="data-card">
+                                <div class="card-item">
+                                    <div class="card-title">总数量</div>
+                                    <div class="card-value">452</div>
+                                    <div class="card-unit">个</div>
+                                </div>
+                                <div class="card-item">
+                                    <div class="card-title">总金额</div>
+                                    <div class="card-value">45</div>
+                                    <div class="card-unit">万元</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 进销存信息状态 -->
+            <div class="data-box1 left_tb fl mtop40">
+                <i class="topL"></i>
+                <i class="topR"></i>
+                <i class="bottomL"></i>
+                <i class="bottomR"></i>
+                <div class="data-title">
+                    <b class="data-title-left fl">[</b>
+                    <span>进销存信息状态</span>
+                    <b class="data-title-right fr">]</b>
+                </div>
+                <!-- 进销存信息状态-->
+                <div class="xmglan">
+                    <div id="lytj" class="lytj"></div>
+
+                    <div class="wgrytj">
+                        <span class="wgrytj_bt">收款方式统计</span>
+                        <div class="wgrytj_tb">
+                            <div id="gztj" style="height:163px"></div>
+                        </div>
+                    </div>
+
+                    <div class="wgrytj">
+                        <span class="wgrytj_bt">商品与供应商统计</span>
+                        <div class="wgrytj_tb">
+                            <div id="xcrytj" style="height:163px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--仪表盘等展示-->
+        <div class="center_zs fl">
+            <div class="data-box1 box1-back">
+                <i class="topL"></i>
+                <i class="topR"></i>
+                <i class="bottomL"></i>
+                <i class="bottomR"></i>
+                <div class="data-title">
+                    <b class="data-title-left">[</b>
+                    <span>销售与库存记录</span>
+                    <b class="data-title-right">]</b>
+                </div>
+                
+                <!-- 按日期时间段显示最近售卖记录 -->
+                <div class="record-section">
+                    <div class="record-title">
+                        <span style="font-size: 16px;">最近售卖记录</span>
+                        <div class="date-filter">
+                            <span>日期范围：</span>
+                            <select id="salesDateRange">
+                                <option value="7">最近7天</option>
+                                <option value="30" selected>最近30天</option>
+                                <option value="90">最近90天</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="record-content" id="salesRecords">
+                        <div class="scrollable-container">
+                            <table class="record-table">
+                                <thead>
+                                    <tr>
+                                        <th>日期</th>
+                                        <th>商品名称</th>
+                                        <th>数量</th>
+                                        <th>金额(元)</th>
+                                        <th>销售员</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2023-06-01</td>
+                                        <td>商品A</td>
+                                        <td>50</td>
+                                        <td>5000</td>
+                                        <td>张三</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-02</td>
+                                        <td>商品B</td>
+                                        <td>30</td>
+                                        <td>3000</td>
+                                        <td>李四</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-03</td>
+                                        <td>商品C</td>
+                                        <td>20</td>
+                                        <td>2000</td>
+                                        <td>王五</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-04</td>
+                                        <td>商品D</td>
+                                        <td>40</td>
+                                        <td>4000</td>
+                                        <td>赵六</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-05</td>
+                                        <td>商品E</td>
+                                        <td>60</td>
+                                        <td>6000</td>
+                                        <td>张三</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-06</td>
+                                        <td>商品F</td>
+                                        <td>25</td>
+                                        <td>2500</td>
+                                        <td>李四</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 按日期时间段显示最近出入库记录 -->
+                <div class="record-section">
+                    <div class="record-title">
+                        <span style="font-size: 16px;">最近出入库记录</span>
+                        <div class="date-filter">
+                            <span>日期范围：</span>
+                            <select id="inventoryDateRange">
+                                <option value="7">最近7天</option>
+                                <option value="30" selected>最近30天</option>
+                                <option value="90">最近90天</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="record-content" id="inventoryRecords">
+                        <div class="scrollable-container">
+                            <table class="record-table">
+                                <thead>
+                                    <tr>
+                                        <th>日期</th>
+                                        <th>类型</th>
+                                        <th>商品名称</th>
+                                        <th>数量</th>
+                                        <th>操作员</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2023-06-01</td>
+                                        <td class="in">入库</td>
+                                        <td>商品A</td>
+                                        <td>100</td>
+                                        <td>张三</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-02</td>
+                                        <td class="out">出库</td>
+                                        <td>商品B</td>
+                                        <td>50</td>
+                                        <td>李四</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-03</td>
+                                        <td class="in">入库</td>
+                                        <td>商品C</td>
+                                        <td>80</td>
+                                        <td>王五</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-04</td>
+                                        <td class="out">出库</td>
+                                        <td>商品D</td>
+                                        <td>30</td>
+                                        <td>赵六</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-05</td>
+                                        <td class="in">入库</td>
+                                        <td>商品E</td>
+                                        <td>120</td>
+                                        <td>张三</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-06</td>
+                                        <td class="out">出库</td>
+                                        <td>商品F</td>
+                                        <td>45</td>
+                                        <td>李四</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--右侧图表展示 -->
+        <div class="right_zs fl">
+            <!-- 销售趋势分析 -->
+            <div class="data-box1 right_tb ">
+                <i class="topL"></i>
+                <i class="topR"></i>
+                <i class="bottomL"></i>
+                <i class="bottomR"></i>
+                <div class="data-title">
+                    <b class="data-title-left">[</b>
+                    <span>销售趋势分析</span>
+                    <b class="data-title-right">]</b>
+                </div>
+                <!--销售趋势分析-->
+                <div class="ryclts">
+                    <div id="xjfxzt" style="height:300px"></div>
+                </div>
+            </div>
+
+            <!-- 库存预警监控 -->
+            <div class="data-box1 right_tb mtop40">
+                <i class="topL"></i>
+                <i class="topR"></i>
+                <i class="bottomL"></i>
+                <i class="bottomR"></i>
+                <div class="data-title">
+                    <b class="data-title-left">[</b>
+                    <span>库存预警监控</span>
+                    <b class="data-title-right">]</b>
+                </div>
+                <!--库存预警-->
+                <div class="ryclts">
+                    <div class="clearfix">
+                        <div id="fxbhqs" style="height:300px"></div>
+                    </div>
+                    <div class="wgrytj">
+                        <div class="wenti_dj">
+                            <div id="wentidj" style="height:100px"></div>
+                        </div>
+                        <div class="wenti_bg">
+                            <table width="200" border="1">
+                                <tr>
+                                    <td>商品类别</td>
+                                    <td>总数量</td>
+                                    <td>库存不足</td>
+                                    <td>库存过剩</td>
+                                </tr>
+                                <tr>
+                                    <td>电子产品</td>
+                                    <td class="green">45</td>
+                                    <td class="orange">12</td>
+                                    <td class="green">5</td>
+                                </tr>
+                                <tr>
+                                    <td>日用百货</td>
+                                    <td class="green">86</td>
+                                    <td class="orange">8</td>
+                                    <td class="green">15</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="h30 clearfix"></div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/monitor_sw.js"></script>
+
+<script>
+    $(function () {
+        //分类选择	
+        $(".xmgl_heard li").click(function () {
+
+            $(this).attr("class", "");
+            $(this).siblings().attr("class", "hove");
+            $("#xmgl_cen").find(".xmgl_tb").eq($(this).index()).removeClass("none").siblings().addClass("none")
+        });
+        
+        // 日期范围选择处理
+        $("#salesDateRange").change(function() {
+            // 在实际应用中，这里应该调用API获取对应日期范围的销售数据
+            // 这里只是模拟选择后重置滚动动画
+            resetScrollAnimation("salesRecords");
+        });
+        
+        $("#inventoryDateRange").change(function() {
+            // 在实际应用中，这里应该调用API获取对应日期范围的库存数据
+            // 这里只是模拟选择后重置滚动动画
+            resetScrollAnimation("inventoryRecords");
+        });
+        
+        // 重置滚动动画
+        function resetScrollAnimation(elementId) {
+            const container = $("#" + elementId).find(".scrollable-container");
+            container.css("animation", "none");
+            container[0].offsetHeight; // 触发重绘
+            container.css("animation", "scroll 20s linear infinite");
+        }
+        
+        // 初始化滚动动画
+        function initScrollAnimations() {
+            // 获取实际表格高度，调整滚动动画的结束位置
+            adjustScrollAnimation("salesRecords");
+            adjustScrollAnimation("inventoryRecords");
+        }
+        
+        function adjustScrollAnimation(elementId) {
+            const container = $("#" + elementId).find(".scrollable-container");
+            const tableHeight = container.find("table").height();
+            const containerHeight = $("#" + elementId).height();
+            
+            // 只有当表格高度大于容器时才需要滚动
+            if (tableHeight > containerHeight) {
+                // 动态创建样式，设置正确的滚动距离
+                const scrollDistance = tableHeight - containerHeight;
+                const styleId = elementId + "Style";
+                
+                // 移除旧样式（如果存在）
+                $("#" + styleId).remove();
+                
+                // 创建新样式
+                $("<style>")
+                    .attr("id", styleId)
+                    .text(`
+                        @keyframes scroll-${elementId} {
+                            0% { top: 0; }
+                            100% { top: -${scrollDistance}px; }
+                        }
+                        #${elementId} .scrollable-container {
+                            animation: scroll-${elementId} 20s linear infinite;
+                        }
+                        #${elementId} .scrollable-container:hover {
+                            animation-play-state: paused;
+                        }
+                    `)
+                    .appendTo("head");
+            }
+        }
+        
+        // 页面加载完成后初始化滚动动画
+        $(window).on("load", initScrollAnimations);
+    });
+</script>
+
+</html>

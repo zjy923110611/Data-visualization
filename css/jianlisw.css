@@ -1,0 +1,174 @@
+/*项目概览*/
+.none{ display:none}
+.xmglan{ width:100%;color:#fff; padding:20px 0;}
+.xmgl_heard{ width:100%; display:block; overflow:hidden}
+.xmgl_heard li{ float:left; list-style:none; font-size:14px; height:24px; line-height:24px; text-align:center;background:#0068b7; width:50%; cursor:pointer; border-top:1px #032d60 solid;border-bottom:1px #032d60 solid}
+.xmgl_heard li.hove{ font-size: 17px;background:#000c3b}
+
+/* 数据卡片样式 */
+.data-card {
+    display: flex;
+    justify-content: space-around;
+    padding: 6px 10px;
+}
+
+.card-item {
+    text-align: center;
+    width: 45%;
+    background: rgba(0, 37, 78, 0.4);
+    border: 1px solid #0068b7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 104, 189, 0.3);
+}
+
+.card-title {
+    font-size: 14px;
+    color: #37baf7;
+    margin-bottom: 10px;
+}
+
+.card-value {
+    font-weight: bold;
+    font-size: 19px;
+    color: #00ff00;
+    margin-bottom: 5px;
+}
+
+.card-unit {
+    font-size: 12px;
+    color: #00ffff;
+}
+
+/*项目概览 */
+.xm_cszs{ font-size:12px; padding:10px 10px 0 10px; }
+.xm_cszs li { line-height:22px;overflow:hidden}
+.xm_cszs li span{ color:#00ff00; padding:0 5px 0 10px}
+.xm_cszs li p{ float:left;width:33%}
+.xm_cszs li p span{ color:#00ffff; padding:0}
+.xm_cszs li p cite{ color:#00ffff;}
+
+/*项目人员信息状态 */
+.lytj {width:100%;float: left;height:100px;}
+.wgrytj_bt{ font-size: 15px;padding:10px; clear:both; display:block;border-top:1px #032d60 solid; color:#fff}
+.wgrytj_tb{ padding-left:10px;}
+
+/*仪表盘等展示*/
+.center_zs{ width:30%;}
+.box1-back{height:763px;background-image:-webkit-radial-gradient(250px 250px at 50% 50%,hsla(209,99%,32%,28),hsla(228,100%,0%,0));background-image:radial-gradient(250px 250px at 50% 50%,hsla(209,99%,32%,28),hsla(228,100%,0%,0))}
+
+/* 销售与库存记录样式 */
+.record-section {
+    margin: 10px;
+    height: 350px;
+}
+
+.record-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #0068b7;
+    color: #37baf7;
+    font-size: 14px;
+}
+
+.date-filter {
+    display: flex;
+    align-items: center;
+}
+
+.date-filter span {
+    font-size: 16px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.date-filter select {
+    background-color: rgba(0, 37, 78, 0.4);
+    border: 1px solid #0068b7;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.record-content {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrollable-container {
+    position: absolute;
+    width: 100%;
+    animation: scroll 20s linear infinite;
+}
+
+.scrollable-container:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% { top: 0; }
+    100% { top: -180px; }
+}
+
+.record-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+.record-table th {
+    background-color: rgba(0, 104, 183, 0.3);
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    color: #37baf7;
+}
+
+.record-table td {
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0, 104, 183, 0.2);
+}
+
+.record-table tr:hover {
+    background-color: rgba(0, 104, 183, 0.2);
+}
+
+/* 出入库类型样式 */
+.record-table td.in {
+    color: #00ff00;
+}
+
+.record-table td.out {
+    color: #ff9900;
+}
+
+/*问题等级*/
+.wenti_dj{ width:40%; float:left}
+.wenti_bg{ float:left; padding-top:10px; width:60%;}
+.wenti_bg table{border-collapse:collapse;border: 1px solid #00a0e9; color:#fff; width:95%}  
+.wenti_bg td{border-collapse:collapse; border: 1px solid #00a0e9; padding:2px 4px; }  
+.wenti_bg td.green{ color:#05d60f; text-align:center}  
+.wenti_bg td.orange{ color:#d75a07; text-align:center}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
